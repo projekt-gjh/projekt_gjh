@@ -1,0 +1,12 @@
+30.11.2017
+
+Marek Daneo vytvoril databázu a svg
+Samo Šindler vytvoril outlinde tabu3ky 
+
+dohodli sme sa na zdielanom drive a prístupe k databáze
+
+14.12.2017
+Marek Danèo vytvoril php a html pre login do admin session 
+Samo Šindler  vytvoril github repository na zdielanie kodov
+
+Marek Danèo vytvoril main page kde doplòil súae a podkategorie ako nj jazyk robotika a podobne

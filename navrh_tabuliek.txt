@@ -1,0 +1,40 @@
+Prvá stránka by si pamätala pár postov ktoré by sa zobrazovali na prvej strane 
+ideálne podla  aktualneho roku aby tam boli ibva tie najnovšie posty
+
+malo by to nejake id 
+potom name sútaže
+a potom easovy udaj  a to rok mesiac den
+ilustranená front fotka e1
+* il foto e2
+* il foto e3
+* il foto e4
+... až do 12 foto možno aj viac
+idealne aby sa cez javascript menili po nejakom Easovom úseku 
+aby sa nemenili vŠetky fotky na stránke naraz tak by mali medzi sebou nejaké opozdenia a každý by mal iný poeiatoený eas 
+ale celkový eas menenia by bol default uložený v kolonke timer
+Stapec heading = nadpis toho malého preview textu
+Short popis  = krátky popis toho daného eventu - sú?aže
+long_popis = ten sa bude naeítava? ak si user rozklikne more info
+údaj o autorovi daného textu = autor
+mená sú?ažiacich ktorý sa danej sú?aže zúeastnili 
+zvláš? stapec na zapamätanie umiestnenia  na sú?aži
+
+
+
+final overview
+name : sú?aže
+
+id   competition_name   year   month   day   foto   foto11  foto12   sever_time   minor_heading   major_heading   minor_info   major_info   author_of_post   names_of_sudents   place_in_competition    server_time 
+
+/*  viac fotiek
+search */
+
+author = 'brisinger007'
+
+23.11.2017
+
+         
+30.11
+Názov tabu¾ky
+
+Gjh_sutaze
