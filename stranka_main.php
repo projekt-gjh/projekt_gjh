@@ -2,11 +2,45 @@
 <html>
 <head>
 <title>Súťaže na GJH</title>
+
+<style>
+
+a{
+	color:inherit;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}	
+
+a:hover {
+    text-decoration: underline;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: auto auto auto auto auto auto auto;
+	background-color: #ffffff;
+}
+
+.header {
+	grid-area: 1 / 1 / 1 / 8;
+	font-size: 30px;
+	color: #009900;
+}
+
+
+</style>
 </head>
 <body>
 
-<h1><a href='stranka_main.php'>Súťaže na GJH</a></h1>
-<p>Školské súťaže a olympiády</p>
+<div class="grid-container">
+	<div class="header"><a href='stranka_main.php'>Súťaže na GJH</a></div>
+</div>
 
 <table>
 
@@ -46,12 +80,11 @@
 	}
 	else{
 		$result = $mysqli->query("SELECT * FROM gjh_sutaze ORDER BY ID DESC LIMIT 2");
-		echo "Najnovšie oznámené súťaže";
+		echo "Najnovšie oznámené súťaže<br>";
 		while($row=$result->fetch_assoc()){
 			echo "<br><a href='stranka_main.php?type=$row[event_type]&id=$row[ID]'>$row[competition_name]</a><br>";
 			echo "<br>$row[day].$row[month].$row[year]";
-			echo "<br>$row[minor_info]";
-			"<br>";
+			echo "<br>$row[minor_info]<br>";
 		}
 	}
 			
