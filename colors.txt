@@ -1,2 +1,6 @@
 background-color: #2aa20c;
 color: #ffffff;
+
+zelena - #027202
+pozadie stranky - #f6f4f8
+pozadie divov - #ffffff
