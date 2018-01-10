@@ -1,11 +1,11 @@
-﻿﻿<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
 <title>Súťaže na GJH</title>
 </head>
 <body>
 
-<h1>Súťaže na GJH</h1>
+<h1><a href='stranka_main.php'>Súťaže na GJH</a></h1>
 <p>Školské súťaže a olympiády</p>
 
 <table>
@@ -27,7 +27,6 @@
 						"kosper1",
 						"sindler.s");
 	mysqli_set_charset($mysqli,"utf8");
-
 	if(isset($_GET['type'])){
 		$result = $mysqli->query("SELECT * FROM gjh_sutaze WHERE event_type='".$_GET['type']."'");
 		if(isset($_GET['id'])){
@@ -44,6 +43,16 @@
 				echo "<br><a href='stranka_main.php?type=".$_GET['type']."&id=$row[ID]'>$row[competition_name]</a><br>";	
 			}	
 		} 
+	}
+	else{
+		$result = $mysqli->query("SELECT * FROM gjh_sutaze ORDER BY ID DESC LIMIT 2");
+		echo "Najnovšie oznámené súťaže";
+		while($row=$result->fetch_assoc()){
+			echo "<br><a href='stranka_main.php?type=$row[event_type]&id=$row[ID]'>$row[competition_name]</a><br>";
+			echo "<br>$row[day].$row[month].$row[year]";
+			echo "<br>$row[minor_info]";
+			"<br>";
+		}
 	}
 			
 	$mysqli->close();	
