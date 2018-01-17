@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>Súťaže na GJH</title>
-
+<link rel="shortcut icon" href="favicon.ico" />
 <style>
 
 a{
@@ -18,8 +18,9 @@ a:hover {
     text-decoration: underline;
 }
 .grid-container {
+	padding: 40px;
 	display: grid;
-	grid-template-columns: 150px auto auto auto auto auto auto auto auto auto;
+	grid-template-columns: 170px auto auto auto auto auto auto auto auto auto;
 	background-color: #f6f4f8;
 }
 .header {
@@ -31,19 +32,39 @@ a:hover {
 }
 
 .menu {
-	grid-area: 2 / 1 / 40 /1;
+	grid-area: 2 / 1 / 10 /1;
 	background-color: #ffffff;
-	font-size: 20px;
+	font-size: 18px;
+}
+
+.menu a { 
+	color:inherit;
+	display:block;
+	padding: 5px 2px;
 }
 
 .article1 {
-	grid-area: 3/5/8/10;
+	margin: 10px 15px;
+	grid-area: 3/5/8/6;
 	background-color: #ffffff;
 }
 
 .article2 {
-	grid-area: 10/5/15/10;
+	margin: 10px 15px;
+	grid-area: 20/5/25/6;
+	background-color: #ffffff;
 }
+
+.event_list {
+	font-size: 15px;
+	grid-area: 2 / 3 / 10 /3;
+}
+
+.event_list a {
+	padding:0;
+	color:inherit;
+}
+
 
 </style>
 </head>
@@ -61,6 +82,7 @@ a:hover {
 	<a href='stranka_main.php?type=nj'>Nemecký jazyk</a>
 	<a href='stranka_main.php?type=mat'>Matematika</a>
 	<a href='stranka_main.php?type=fyz'>Fyzika</a>
+	<a href='stranka_main.php?type=ostatne'>Ostatné</a>
 </div>
 
 <?php
@@ -81,9 +103,18 @@ a:hover {
 			}
 		}	
 		else{
-			while($row=$result->fetch_assoc()){
-				echo "<br><a href='stranka_main.php?type=".$_GET['type']."&id=$row[ID]'>$row[competition_name]</a><br>";	
-			}	
+			echo "<div class='event_list'>";
+			$count = $mysqli->query("SELECT COUNT(*) FROM gjh_sutaze WHERE event_type='".$_GET['type']."'");
+			$row=$count->fetch_assoc();
+			if($row['COUNT(*)']==0){
+				echo "Niesú ohlásené žiadne súťaže tohto typu";
+			}
+			else{
+				while($row=$result->fetch_assoc()){
+					echo "<br><a href='stranka_main.php?type=".$_GET['type']."&id=$row[ID]'>$row[competition_name]</a><br>";
+				}
+				echo "</div>";	
+			}
 		} 
 	}
 	else{
