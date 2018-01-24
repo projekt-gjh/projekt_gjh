@@ -18,9 +18,10 @@ a:hover {
     text-decoration: underline;
 }
 .grid-container {
+	grid-auto-rows: 1cm;
+	grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
 	padding: 40px;
 	display: grid;
-	grid-template-columns: 170px auto auto auto auto auto auto auto auto auto;
 	background-color: #f6f4f8;
 }
 .header {
@@ -32,7 +33,7 @@ a:hover {
 }
 
 .menu {
-	grid-area: 2 / 1 / 10 /1;
+	grid-area: 2 / 1 / 10 /3;
 	background-color: #ffffff;
 	font-size: 18px;
 }
@@ -44,25 +45,37 @@ a:hover {
 }
 
 .article1 {
-	margin: 10px 15px;
-	grid-area: 3/5/8/6;
+	margin: 40px 60px;
+	grid-area: 3/4/8/11;
 	background-color: #ffffff;
 }
 
 .article2 {
-	margin: 10px 15px;
-	grid-area: 20/5/25/6;
+	margin: 40px 60px;
+	grid-area: 8/4/25/11;
 	background-color: #ffffff;
 }
 
 .event_list {
+	grid-area: 2 / 4 / 10 /7;
 	font-size: 15px;
-	grid-area: 2 / 3 / 10 /3;
 }
 
 .event_list a {
 	padding:0;
 	color:inherit;
+}
+
+.event_name{
+	grid-area: 2 / 4 / 3 /7;
+}
+
+.event_date{
+	grid-area: 3 / 4 / 4 /7;
+}
+
+.event_info{
+	grid-area: 4 / 4 / 10 /9;
 }
 
 
@@ -96,10 +109,15 @@ a:hover {
 		if(isset($_GET['id'])){
 			$result = $mysqli->query("SELECT * FROM gjh_sutaze WHERE ID=".$_GET['id']."");	
 			while($row=$result->fetch_assoc()){
-				echo "<br>$row[competition_name]<br>";
-				echo "<br>$row[day].$row[month].$row[year]";
-				echo "<br>$row[minor_info]";
-				echo "<br>$row[major_info]";
+				echo "<div class='event_name'>";
+				echo "$row[competition_name]";
+				echo "</div>";
+				echo "<div class='event_date'>";
+				echo "$row[day].$row[month].$row[year]";
+				echo "</div>";
+				echo "<div class='event_info'>";
+				echo "$row[major_info]";
+				echo "</div>";
 			}
 		}	
 		else{
@@ -119,7 +137,9 @@ a:hover {
 	}
 	else{
 		$result = $mysqli->query("SELECT * FROM gjh_sutaze ORDER BY ID DESC LIMIT 2");
+		echo "<div class='event_list'>";
 		echo "Najnovšie oznámené súťaže <br>";
+		echo "</div>";
 		$i=0;
 		while($row=$result->fetch_assoc()){
 			$i++;
