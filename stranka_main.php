@@ -23,6 +23,7 @@ a:hover {
 	padding: 40px;
 	display: grid;
 	background-color: #f6f4f8;
+	
 }
 .header {
 	padding-left: 10px;
@@ -30,9 +31,12 @@ a:hover {
 	font-size: 30px;
 	color: #ffffff;
 	background-color: #027202;
+	border: 2px solid inherit;
+	border-radius: 8px 8px 0 0;
 }
 
 .menu {
+	padding-left: 10px;
 	grid-area: 2 / 1 / 10 /3;
 	background-color: #ffffff;
 	font-size: 18px;
@@ -57,7 +61,7 @@ a:hover {
 }
 
 .event_list {
-	grid-area: 2 / 4 / 10 /7;
+	grid-area: 3 / 4 / 10 /7;
 	font-size: 15px;
 }
 
@@ -129,7 +133,7 @@ a:hover {
 			}
 			else{
 				while($row=$result->fetch_assoc()){
-					echo "<br><a href='stranka_main.php?type=".$_GET['type']."&id=$row[ID]'>$row[competition_name]</a><br>";
+					echo "<a href='stranka_main.php?type=".$_GET['type']."&id=$row[ID]'>$row[competition_name]</a><br>";
 				}
 				echo "</div>";	
 			}
