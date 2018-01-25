@@ -1,0 +1,72 @@
+/* CSS Document */
+body {
+     background-color: white;
+}
+
+.div_main {
+    background-color: white;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+    padding: 2% 2% 5% 2%;
+}
+
+.login_button {
+    font: normal 100% / 200% "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #2aa20c;
+    color: #ffffff;  
+    border-color: rgba(0, 0, 0, 0.21);
+    padding: 1.5% 50% 1.5% 50%;
+    border-radius: 10px;   
+}
+
+.login_button:hover {
+    font: normal 100% / 200% "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #35b3ee;
+    color: #ffffff;
+    border-color: rgba(0, 0, 0, 0.21);
+    padding: 1.5% 50% 1.5% 50%;  
+    border-radius: 10px;
+}
+
+.user_input_name{
+    font: normal 100% / 200% "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: white;
+    color: #b3b3b3;
+    transition: all linear 0.2s;
+    border-color: rgba(0, 0, 0, 0.21);
+    padding: 1% 16% 1% 16%;  
+    border-radius: 8px;
+    margin-bottom: 5%;
+}
+
+.user_input_password{
+    font: normal 100% / 200% "Helvetica Neue", Helvetica, Arial, sans-serif;
+    transition: all linear 0.2s;
+    background-color: white;
+    color: #b3b3b3;
+    border-color: rgba(0, 0, 0, 0.21);
+    padding: 1% 16% 1% 16%;  
+    border-radius: 8px;                    
+
+}
+
+.centered_user_input {
+    position: fixed;
+    left: 50%;    
+    top: 72%;
+    
+    /* bring your own prefixes */
+    transform: translate(-60%, -0%);
+}
+
+
+.centered_login_button {
+    position: fixed;
+    top: 102%;
+    left: 50%;
+    transform: translate(-60%, -0%);
+}

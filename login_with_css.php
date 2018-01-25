@@ -5,7 +5,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="login_w.css">
+    <link rel="stylesheet" type="text/css" href="login_version_2.css">
   </head>
 	<body>
 	
@@ -68,9 +68,9 @@
     <br>
 	  <form action="stranka_login.php" method="post">
       <div class="centered_user_input">
-  		  <input class="user_input" type="text" name="meno" value="meno">
+  		  <input class="user_input_name" type="text" name="meno" placeholder="Username" value="meno">
   		  <br>
-  		  <input class="user_input" type="password" name="heslo" value="heslo">
+  		  <input class="user_input_password" type="password" name="heslo" placeholder="Password" value="heslo">
   		  <br>
       </div>
       <div class="centered_login_button">
