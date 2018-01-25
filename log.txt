@@ -1,12 +1,16 @@
 30.11.2017
 
-Marek Daneo vytvoril datab·zu a svg
-Samo äindler vytvoril outlinde tabu3ky 
+Marek Daneo vytvoril datab√°zu a svg
+Samo ≈†indler vytvoril outlinde tabu3ky 
 
-dohodli sme sa na zdielanom drive a prÌstupe k datab·ze
+dohodli sme sa na zdielanom drive a pr√≠stupe k datab√°ze
 
 14.12.2017
-Marek DanËo vytvoril php a html pre login do admin session 
-Samo äindler  vytvoril github repository na zdielanie kodov
+Marek Dan√®o vytvoril php a html pre login do admin session 
+Samo ≈†indler  vytvoril github repository na zdielanie kodov
 
-Marek DanËo vytvoril main page kde doplÚil s˙ùaûe a podkategorie ako nj jazyk robotika a podobne
+Marek Dan√®o vytvoril main page kde dopl√≤il s√∫¬ùa≈æe a podkategorie ako nj jazyk robotika a podobne
+
+
+
+urobil som css k login  page uz to vezera vcelku pekne je to nahrate pod menom login_with_css 
