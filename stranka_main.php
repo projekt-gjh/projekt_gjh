@@ -56,7 +56,7 @@ a:hover {
 
 .article2 {
 	margin: 40px 60px;
-	grid-area: 8/4/25/11;
+	grid-area: 8/4/13/11;
 	background-color: #ffffff;
 }
 
@@ -109,7 +109,6 @@ a:hover {
 						"sindler.s");
 	mysqli_set_charset($mysqli,"utf8");
 	if(isset($_GET['type'])){
-		$result = $mysqli->query("SELECT * FROM gjh_sutaze WHERE event_type='".$_GET['type']."'");
 		if(isset($_GET['id'])){
 			$result = $mysqli->query("SELECT * FROM gjh_sutaze WHERE ID=".$_GET['id']."");	
 			while($row=$result->fetch_assoc()){
@@ -129,14 +128,60 @@ a:hover {
 			$count = $mysqli->query("SELECT COUNT(*) FROM gjh_sutaze WHERE event_type='".$_GET['type']."'");
 			$row=$count->fetch_assoc();
 			if($row['COUNT(*)']==0){
-				echo "Niesú ohlásené žiadne súťaže tohto typu";
+				echo "Nie sú ohlásené žiadne súťaže tohto typu";
 			}
 			else{
-				while($row=$result->fetch_assoc()){
-					echo "<a href='stranka_main.php?type=".$_GET['type']."&id=$row[ID]'>$row[competition_name]</a><br>";
+				$result = $mysqli->query("SELECT * FROM gjh_sutaze WHERE event_type='".$_GET['type']."'");
+				?>	
+				<form action="stranka_main.php?type=<?php echo $_GET['type']; ?>" method="post">
+						<?php
+						$years = array();
+						while($row=$result->fetch_assoc()){
+							$add = 0;
+							$unit = $row['year'];
+							for ($i=0; $i < count($years); $i++){
+								if($unit == $years[$i]){
+									++$add;
+								}
+							}
+							if($add == 0){
+								array_push($years, $unit);
+							}
+						}
+						echo "<select name='filter'>";
+						for ($i=0; $i < count($years); $i++){
+							if(isset($_POST['filtrovat'])){
+								if($years[$i] == $_POST['filter']){
+									echo "<option value='".$years[$i]."' selected>".$years[$i]."</option>";
+								}
+								else{
+									echo "<option value='".$years[$i]."'>".$years[$i]."</option>";	
+								}	
+							}
+							else{
+								echo "<option value='".$years[$i]."'>".$years[$i]."</option>";
+							}
+						}
+						echo "</select>";
+						?>
+					<input type="submit" value="Filtrovať" name='filtrovat'>
+				</form>	
+				<?php
+					if(isset($_POST['filtrovat'])){
+						echo "rok ";
+						echo $_POST['filter'];
+						echo "<br>";
+						$result = $mysqli->query("SELECT * FROM gjh_sutaze WHERE event_type='".$_GET['type']."' AND year='".$_POST['filter']."'");
+					}
+					else{
+						$result = $mysqli->query("SELECT * FROM gjh_sutaze WHERE event_type='".$_GET['type']."'");
+					}
+	
+					while($row=$result->fetch_assoc()){
+						echo "<a href='stranka_main.php?type=".$_GET['type']."&id=$row[ID]'>$row[competition_name]</a><br>";
+					}
+					echo "</div>";	
 				}
-				echo "</div>";	
-			}
 		} 
 	}
 	else{
@@ -167,7 +212,8 @@ a:hover {
 			
 	$mysqli->close();	
 ?>
-	
+
+
 </div>	
 </body>
 </html> 
