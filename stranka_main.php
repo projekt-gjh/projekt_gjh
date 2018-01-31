@@ -138,7 +138,7 @@ a:hover {
 						$years = array();
 						while($row=$result->fetch_assoc()){
 							$add = 0;
-							$unit = $row['year'];
+							$unit = $row['school_year'];
 							for ($i=0; $i < count($years); $i++){
 								if($unit == $years[$i]){
 									++$add;
@@ -168,10 +168,10 @@ a:hover {
 				</form>	
 				<?php
 					if(isset($_POST['filtrovat'])){
-						echo "rok ";
+						echo "školský rok ";
 						echo $_POST['filter'];
 						echo "<br>";
-						$result = $mysqli->query("SELECT * FROM gjh_sutaze WHERE event_type='".$_GET['type']."' AND year='".$_POST['filter']."'");
+						$result = $mysqli->query("SELECT * FROM gjh_sutaze WHERE event_type='".$_GET['type']."' AND school_year='".$_POST['filter']."'");
 					}
 					else{
 						$result = $mysqli->query("SELECT * FROM gjh_sutaze WHERE event_type='".$_GET['type']."'");
