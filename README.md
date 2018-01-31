@@ -13,3 +13,6 @@ chyba tam este aby login mal rovnake rozmery ako user input ale inak je to uz po
 vylepšil som ten login potom som to nazval version 2 aby si to vedel porovnať s prvou verziou 
 upravil som aj placeholders a hlavne user input aby to malo pekny box
 radius zakrivenia som zmenšil lebo sa to tej šedej farbe nehodilo tak veľmi ako pri zelenejs
+
+
+pohral som sa s filtrom 
