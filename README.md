@@ -16,3 +16,4 @@ radius zakrivenia som zmenšil lebo sa to tej šedej farbe nehodilo tak veľmi a
 
 
 pohral som sa s filtrom 
+https://turing.gjh.sk/~12danco/stranka%20projekt/stranka_main.php?type=nj
