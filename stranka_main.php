@@ -131,7 +131,7 @@ a:hover {
 				echo "Nie sú ohlásené žiadne súťaže tohto typu";
 			}
 			else{
-				$result = $mysqli->query("SELECT * FROM gjh_sutaze WHERE event_type='".$_GET['type']."'");
+				$result = $mysqli->query("SELECT * FROM gjh_sutaze WHERE event_type='".$_GET['type']."' ORDER BY school_year ASC");
 				?>	
 				<form action="stranka_main.php?type=<?php echo $_GET['type']; ?>" method="post">
 						<?php
