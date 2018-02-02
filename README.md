@@ -19,3 +19,13 @@ pohral som sa s filtrom
 https://turing.gjh.sk/~12danco/stranka%20projekt/stranka_main.php?type=nj
 
 je spravena stranka s vymazavanim a pridavanim eventov bez CSS
+
+
+
+NOVINKA!!! 
+login je už hezký a fungoval mi na všetkých browseroch rovnako 
+trápil som sa s tým 6 hodín kým som sa vykašlal na dynamický web a urobil som to statické
+je to potom súbor login.zip
+
+tu je link ako vyzerá
+https://turing.gjh.sk/~sindler.s/login/login_with_css_version_2.php
