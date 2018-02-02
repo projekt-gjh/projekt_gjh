@@ -1,6 +1,6 @@
 <html>
 	<head>
-	<title>Administratíva</title>
+	<title>Vymazať súťaž</title>
 	<link rel="shortcut icon" href="favicon.ico" />
 	</head>
 	<body>
