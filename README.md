@@ -35,3 +35,5 @@ https://turing.gjh.sk/~12danco/stranka%20projekt/stranka_login.php
 https://turing.gjh.sk/~12danco/stranka%20projekt/stranka_konto.php
 
 username: Admin pw: abc123
+
+Samo popridávaj súťaže mne sa už nechce thx
