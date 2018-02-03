@@ -178,7 +178,7 @@ a:hover {
 					}
 	
 					while($row=$result->fetch_assoc()){
-						echo "<a href='stranka_main.php?type=".$_GET['type']."&id=$row[ID]'>$row[competition_name]</a><br>";
+						echo "<a href='stranka_main.php?type=".$_GET['type']."&id=$row[ID]' title='$row[minor_info]'>$row[competition_name]</a><br>";
 					}
 					echo "</div>";	
 				}
