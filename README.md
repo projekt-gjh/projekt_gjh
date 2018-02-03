@@ -31,6 +31,7 @@ tu je link ako vyzerá
 https://turing.gjh.sk/~sindler.s/login/login_with_css_version_2.php
 
 uz som dorobil vsetky hovadinky
+
 https://turing.gjh.sk/~12danco/stranka%20projekt/stranka_login.php
 https://turing.gjh.sk/~12danco/stranka%20projekt/stranka_konto.php
 
